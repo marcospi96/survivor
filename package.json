@@ -6,12 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup": "node scripts/setup.js",
+    "update-teams": "node scripts/update-teams.js",
+    "migrate": "node scripts/migrate-fixtures.js",
+    "reset": "node scripts/reset.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "next": "14.2.35",
+    "next-auth": "^4.24.14",
+    "pg": "^8.21.0",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.35"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "postcss": "^8",

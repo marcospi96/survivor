@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: survivor-worldcup
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        sync: false        # Set this manually in Render dashboard
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: NEXTAUTH_URL
+        sync: false        # Set to your Render app URL (e.g. https://survivor-worldcup.onrender.com)
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
